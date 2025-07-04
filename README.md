@@ -1,12 +1,9 @@
-# React + Vite
+# Slack AI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<img src="public/logo.png" width="100" />
 
-Currently, two official plugins are available:
+This is an alternative frontend for Slack where the main content is a chronologial feed of all the channels instead of just the selected channel. You can select multiple channels and all of them will appear in the feed.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Why?
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+This is mainly just a project for me to test AI Assisted programming. Initially I have been using Google's Gemini models using gemini cli
