@@ -8,6 +8,7 @@
   color: #333;
   padding: 1rem;
   flex: 1;
+  overflow-y: auto;
 }
 
 .center-column {
@@ -25,7 +26,9 @@
 }
 
 .left-column button {
-  display: block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
   margin-bottom: 1rem;
   padding: 0.5rem;
@@ -33,5 +36,24 @@
   border-radius: 4px;
   background-color: #fff;
   cursor: pointer;
+  color: black;
+}
+
+.left-column button.off {
+  opacity: 0.6;
+}
+
+.status-icon {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.status-icon.off {
+  background-color: gray;
+}
+
+.status-icon.on {
+  background-color: green;
 }
 
