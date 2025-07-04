@@ -7,3 +7,8 @@ This is an alternative frontend for Slack where the main content is a chronologi
 ## Why?
 
 This is mainly just a project for me to test AI Assisted programming. Initially I have been using Google's Gemini models using gemini cli
+
+## Screenshots
+
+Main page
+![main page with 3 columns](/public/screenshot_homepage.jpg)
