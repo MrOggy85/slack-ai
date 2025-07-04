@@ -40,6 +40,11 @@ async function getChannels() {
   }
 }
 
+const FILTER_WHOLE_MESSAGE_TERMS = [
+  'has joined the channel',
+  'has left the channel'
+]
+
 // This function fetches the message history of a conversation.
 // https://api.slack.com/methods/conversations.history
 async function getChannelMessages(channelId) {
@@ -62,7 +67,11 @@ async function getChannelMessages(channelId) {
 
     if (response.data.ok) {
       // We are filtering to return only the essential message data.
-      return response.data.messages.map(message => ({
+      return response.data.messages
+        .filter(message => {
+          return !FILTER_WHOLE_MESSAGE_TERMS.some(x => message.text.indexOf(x) !== -1)
+        })
+        .map(message => ({
         user: message.user,
         text: message.text,
         ts: message.ts,
