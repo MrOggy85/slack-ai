@@ -1,0 +1,37 @@
+#root {
+  display: flex;
+  height: 100vh;
+}
+
+.left-column {
+  background-color: #f0f0f0; /* Soothing gray */
+  color: #333;
+  padding: 1rem;
+  flex: 1;
+}
+
+.center-column {
+  background-color: #e0e8f0; /* Pale blue */
+  color: #333;
+  padding: 1rem;
+  flex: 3;
+}
+
+.right-column {
+  background-color: #006400; /* Thick green */
+  color: white;
+  padding: 1rem;
+  flex: 1;
+}
+
+.left-column button {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
