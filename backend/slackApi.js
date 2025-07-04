@@ -2,9 +2,14 @@ const axios = require('axios');
 
 const token = process.env.SLACK_BOT_TOKEN;
 
-  if (!token) {
-    throw new Error('Slack Bot Token not found. Please set the SLACK_BOT_TOKEN environment variable.');
-  }
+if (!token) {
+  throw new Error('Slack Bot Token not found. Please set the SLACK_BOT_TOKEN environment variable.');
+}
+
+const CHANNEL_BLACKLIST = [
+  'has joined the channel',
+  'has left the channel'
+]
 
 // This function fetches the list of public channels from Slack.
 // https://api.slack.com/methods/conversations.list
@@ -73,10 +78,10 @@ async function getChannelMessages(channelId) {
           return !FILTER_WHOLE_MESSAGE_TERMS.some(x => message.text.indexOf(x) !== -1)
         })
         .map(message => ({
-        user: message.user,
-        text: message.text,
-        ts: message.ts,
-      }));
+          user: message.user,
+          text: message.text,
+          ts: message.ts,
+        }));
     } else {
       throw new Error(`Slack API error: ${response.data.error}`);
     }
