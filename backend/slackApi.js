@@ -20,6 +20,7 @@ async function getChannels() {
       params: {
         exclude_archived: true,
         limit: 999,
+        types: 'public_channel,private_channel,mpim,im'
       }
     });
 
